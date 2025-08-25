@@ -1,2 +1,2 @@
 #!/usr/bin/env sh
-node idkbot.js
+node idkbot.js &> log.txt

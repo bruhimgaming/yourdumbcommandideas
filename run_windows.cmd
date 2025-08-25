@@ -1,1 +1,1 @@
-node idkbot.js
+node idkbot.js > log.txt 2>&1
