@@ -60,12 +60,12 @@ const socket = io("https://www.windows93.net:8088", {
                 socket.send("https://pngtree.com/freepng/bowl-of-tricolor-pasta-with-vegetables-and-basil-for-italian-food-illustration_21001498.html")
 				}
 			
-				// Not sure how this'll stand up against the test of time
+				// im REALLY Not sure how this'll stand up against the test of time
 				// Wasn't even tested yet
 				if (data.msg.startsWith(";roll ")) {
                 if ((/^\\d+$/.test(data.msg.replace(/^;roll /,""))) {
         			var d=Number(data.msg.replace(/^;roll /,""))
-					socket.send(String(Math.floor(Math.random() * x) + 1)
+					socket.send(String(Math.floor(Math.random() * d) + 1)
             }
 
 	const math = require("mathjs"); // top of file
@@ -87,3 +87,4 @@ if (data.msg.startsWith(";calc ")) {
 	    
 
    
+
