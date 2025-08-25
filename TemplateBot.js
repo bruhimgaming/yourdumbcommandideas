@@ -63,10 +63,12 @@ const socket = io("https://www.windows93.net:8088", {
 				// im REALLY Not sure how this'll stand up against the test of time
 				// Wasn't even tested yet
 				if (data.msg.startsWith(";roll ")) {
-                if ((/^\\d+$/.test(data.msg.replace(/^;roll /,""))) {
-        			var d=Number(data.msg.replace(/^;roll /,""))
-					socket.send(String(Math.floor(Math.random() * d) + 1)
-            }
+				    let num = data.msg.replace(/^;roll /, "");
+				    if (/^\d+$/.test(num)) {
+				        let d = Number(num);
+				        socket.send(String(Math.floor(Math.random() * d) + 1));
+				    }
+				}
 
 	const math = require("mathjs"); // top of file
 
@@ -87,4 +89,5 @@ if (data.msg.startsWith(";calc ")) {
 	    
 
    
+
 
