@@ -1,7 +1,5 @@
 # IDKBot: IDK
 
----
-
 ## Commands
 
   - `;hello` : tells you hello
