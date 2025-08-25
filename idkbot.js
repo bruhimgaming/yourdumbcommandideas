@@ -1,5 +1,5 @@
 // Includes
-const mathjs = require("mathjs")
+const mathjs = require("mathjs");
 const io = require("socket.io-client");
 
 // Commands
@@ -49,6 +49,7 @@ function c_calc(data, socket) {
     } catch (e) {
         socket.send("Please provide a valid equation!");
     }
+}
 var commands = Map([
 	[";hello", c_hello],
 	[";credits", c_credits],
@@ -96,6 +97,7 @@ const socket = io("https://www.windows93.net:8088", {
 	    
 
    
+
 
 
 
