@@ -31,7 +31,7 @@ function c_hello(data, socket) {
 	socket.send("Hello, "+data.nick+"!");
 }
 function c_credits(data, socket) {
-	socket.send("ty ben for showing me how to make this! owned by bruh! soon gonna have a help game on github!!!!!!!!!");
+	socket.send("ty ben for showing me how to make this! owned by bruh! help from kailando! soon gonna have a help game on github!!!!!!!!!");
 }
 function c_time(data, socket) {
 	socket.send("Here, "+data.nick+" "+data.date+"");
@@ -86,6 +86,7 @@ var commands = Map([
 	    
 
    
+
 
 
 
