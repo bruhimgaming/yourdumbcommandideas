@@ -71,24 +71,31 @@ function c_calc(data, socket) {
         socket.send("Please provide a valid equation!");
     }
 }
-var commands = Map([
+function c_discord(data, socket) {
+	socket.send("https://discord.gg/AwTEUQW5 our disc0rd!!!")
+}
+
+var commands = new Map([
 	[";hello", c_hello],
 	[";credits", c_credits],
 	[";time", c_time],
 	[";say ", c_say],
 	[";fish", c_fish],
 	[";help", c_help],
-	[";roll ", c_roll]
+	[";roll ", c_roll],
+	[";disc0rd", c_discord]
 ])
 
-	
-    
-	    
 
-   
-
-
-
-
-
-
+// Code
+function main() {
+	socket.emit("user joined", "IDKBot [;]", "blue", "", "");
+	socket.on("message", function(data) {
+		for (const [key, value] of commands) {
+			if (data.msg.startsWith(key)) {
+				value(data, socket);
+				break;
+			}
+		}
+	});
+}
