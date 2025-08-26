@@ -1,6 +1,6 @@
 
 // Includes
-const mathjs = require("mathjs")
+const mathjs = require("mathjs");
 const io = require("socket.io-client");
 const socket = io("https://www.windows93.net:8088", {
 	forceNew: true,
@@ -72,7 +72,7 @@ function c_calc(data, socket) {
     }
 }
 function c_discord(data, socket) {
-	socket.send("https://discord.gg/AwTEUQW5 our disc0rd!!!")
+	socket.send("https://disc0rd.gg/AwTEUQW5 our disc0rd!!! (change 0 to o)")
 }
 
 var commands = new Map([
@@ -84,7 +84,7 @@ var commands = new Map([
 	[";help", c_help],
 	[";roll ", c_roll],
 	[";disc0rd", c_discord]
-])
+]);
 
 
 // Code
@@ -100,4 +100,4 @@ function main() {
 	});
 }
 
-main()
+main();
